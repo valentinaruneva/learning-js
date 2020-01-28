@@ -1,4 +1,6 @@
-let admin;
-let name = 'Джон';
-  admin = name;
-alert(admin);
+// let admin;
+let name = "Ilya";
+  // admin = name;
+alert(`hello ${1}`);
+alert(`hello ${"name"}`);
+alert(`hello ${name}`);

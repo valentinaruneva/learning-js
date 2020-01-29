@@ -108,4 +108,41 @@
     alert(`hello ${name}`);     =Ilya
 
 Раздел 6. Преобразование типов.
-    
+    - строковое
+        String(123)                   // '123'
+        String(-12.3)                 // '-12.3'
+        String(null)                  // 'null'
+        String(undefined)             // 'undefined'
+        String(true)                  // 'true'
+        String(false)                 // 'false'
+        String(Symbol('my symbol'))   // 'Symbol(my symbol)'
+        '' + Symbol('my symbol')      // TypeError is thrown
+    - булевое
+        Для явного преобразования к булевому значению, нужно применить функцию Boolean(). 
+        Неявное преобразование происходит в логическом контексте if (val) { … } или при применении логических операторов (|| && !).
+            И ( &&)
+                    var a1 =  true && true;     // t && t returns true
+                    var a2 =  true && false;    // t && f returns false
+                    var a3 = false && true;     // f && t returns false
+                    var a4 = false && (3 == 4); // f && f returns false
+                    var a5 = 'Cat' && 'Dog';    // t && t returns Dog
+                    var a6 = false && 'Cat';    // f && t returns false
+                    var a7 = 'Cat' && false;    // t && f returns false
+            ИЛИ ( ||)
+                    var o1 =  true || true;     // t || t returns true
+                    var o2 = false || true;     // f || t returns true
+                    var o3 =  true || false;    // t || f returns true
+                    var o4 = false || (3 == 4); // f || f returns false
+                    var o5 = 'Cat' || 'Dog';    // t || t returns Cat
+                    var o6 = false || 'Cat';    // f || t returns Cat
+                    var o7 = 'Cat' || false;    // t || f returns Cat
+            НЕ ( !)
+                    var n1 = !true;  // !t returns false
+                    var n2 = !false; // !f returns true
+                    var n3 = !'Cat'; // !t returns false
+        Boolean(2)          // explicit
+        if (2) { ... }      // implicit due to logical context
+        !!2                 // implicit due to logical operator
+        2 || 'hello'        // implicit due to logical operator
+
+    - численное
